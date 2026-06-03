@@ -9,6 +9,8 @@ export const registerUser = createAsyncThunk(
             localStorage.setItem('token', data.token)
             return data
         } catch(err){
+            console.log("AXIOS ERROR:", err);
+            console.log("RESPONSE:", err.response);
             return rejectWithValue(err.response?.data?.message || 'Registration failed')
         }
     }

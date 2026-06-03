@@ -71,7 +71,7 @@ import {io} from '../server.js'
     }
   } 
   // Get all orders (admin) -
-  export const getAooOrders = async (req,res)=>{
+  export const getAllOrders = async (req,res)=>{
      try{
         const orders = await Order.find({})
         .populate('user', 'name email')

@@ -1,6 +1,6 @@
 import express from 'express'
-import { createOrder, getMyOrders, getOrderById,} from '../controllers/orderController'
-import {protect} from '../middleware/authMiddleware'
+import { createOrder, getMyOrders, getOrderById,} from '../controllers/orderController.js'
+import {protect} from '../middleware/authMiddleware.js'
 const router = express.Router()
 router.post('/',protect,createOrder)
 router.get('/my',protect, getMyOrders)

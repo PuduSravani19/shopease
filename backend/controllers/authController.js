@@ -11,6 +11,7 @@ const generateToken = (userId) => {
  // - Register -
  export const register = async (req , res)=>{
     try{
+        console.log("Register body:", req.body);
         const {name, email, password} = req.body
          // check required fields
          if(!name || !email || !password){
@@ -36,6 +37,7 @@ const generateToken = (userId) => {
           })
           
     } catch (err){
+        console.error("register error:", err);
         res.status(500).json({message:err.message})
     }
  }
@@ -75,7 +77,7 @@ const generateToken = (userId) => {
    export const getMe = async (req,res)=>{
     res.json({
         user:{
-            _id:user._id,
+            _id:req.user._id,
             name:req.user.name,
             email: req.user.email,
             role: req.user.role,

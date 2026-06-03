@@ -36,7 +36,7 @@ import mongoose from 'mongoose'
     })
     const orderSchema = new mongoose.Schema({
         user:{
-            type:mongoose.Schema.Tyoes.objectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:'User',
             required: true,
         },
@@ -44,7 +44,7 @@ import mongoose from 'mongoose'
         deliveryAddress: deliveryAddressSchema,
         paymentMethod:{
             type:String,
-            enum: ['COD', Online],
+            enum: ['COD', 'online'],
             default:'COD'
         },
         totalPrice:{

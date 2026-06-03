@@ -17,6 +17,8 @@ export default function RegisterPage(){
  }
   const handleSubmit =(e)=>{
     e.preventDefault()
+     console.log("SUBMIT CLICKED")
+  console.log(form)
     dispatch(registerUser(form))
   }
   return(
