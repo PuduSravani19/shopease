@@ -11,7 +11,7 @@ export default function LoginPage(){
         if(token) navigate('/')
     },[token, navigate])
  const handleChange =(e)=>{
-    setForm({ ...form,[e.targte.name]:e.target.value})
+    setForm({ ...form,[e.target.name]:e.target.value})
     dispatch(clearError())
  }
  const handleSubmit =(e)=>{

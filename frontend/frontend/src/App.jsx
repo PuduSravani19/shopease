@@ -4,6 +4,7 @@ import {Provider} from 'react-redux'
 import { store} from './app/store'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
+import HomePage from './pages/HomePage'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App(){
@@ -15,9 +16,8 @@ function App(){
         <Route path="/register" element={<RegisterPage />} />
         <Route path ="/" element={
           <ProtectedRoute>
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-              <h1 className="text-2xl font-bold">🛍️ ShopEase Home — Coming Soon!</h1>
-            </div>
+          
+          <HomePage />
           </ProtectedRoute>
 
         } />
