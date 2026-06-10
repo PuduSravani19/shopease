@@ -21,14 +21,16 @@ const productSchema = new mongoose.Schema({
         required: [true, 'Product price is required']
 
     },
-    category:{
-        type:String,
-        required:[true, 'Product category is required'],
-        enum:['Electonics','Clothing','Books','Sports','Home','Other']
-    },
+    // ✅ new — remove enum restriction
+category: {
+  type: String,
+  required: [true, 'Product category is required'],
+},
+    
+
     image:{
         type:String,
-        default:'https://via.placeholder.com/400',
+        default: 'https://placehold.co/400x400?text=No+Image',
     },
     stock:{
         type:Number,
