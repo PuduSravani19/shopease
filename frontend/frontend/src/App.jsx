@@ -5,6 +5,7 @@ import { store} from './app/store'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import HomePage from './pages/HomePage'
+import CartPage from './pages/cartPage'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App(){
@@ -21,6 +22,11 @@ function App(){
           </ProtectedRoute>
 
         } />
+         <Route path="/cart" element={
+            <ProtectedRoute>
+              <CartPage />
+            </ProtectedRoute>
+          } />
       </Routes>
       
       </BrowserRouter>
