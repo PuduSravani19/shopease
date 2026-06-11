@@ -103,7 +103,7 @@ export default function OrdersPage() {
                       key={i}
                       src={item.image}
                       alt={item.name}
-                      className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 flex-shrink-0"
+                      className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 shrink-0"
                       onError={(e) => e.target.src = 'https://placehold.co/400x400?text=No+Image'}
                     />
                   ))}

@@ -44,6 +44,9 @@ export const loginUser = createAsyncThunk(
         clearError:(state)=>{
             state.error =''
         },
+         setUser: (state, action) => {   // ← add this
+    state.user = action.payload
+  },
     },
     extraReducers: (builder)=> {
         builder
@@ -78,6 +81,6 @@ export const loginUser = createAsyncThunk(
         })
     }
  })
- export const {logout, clearError} = authSlice.actions
+ export const {logout, clearError, setUser} = authSlice.actions
  export default authSlice.reducer
 
