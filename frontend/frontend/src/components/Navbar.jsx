@@ -20,6 +20,7 @@ export default function Navbar(){
                 <div className="flex items-center gap-4">
                     {/* cart */}
                     <Link to="/cart" className="relative">
+
                     <span className="text-2xl">🛒</span>
                     {cartCount >0 && (
                         <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">
@@ -27,6 +28,9 @@ export default function Navbar(){
                         </span>
                     )}
                     </Link>
+                    <Link to="/orders" className="text-sm text-gray-600 hover:text-blue-600">
+  📦 Orders
+</Link>
                     {/* User */}
                     {user  ? (
                         <div className="flex items-center gap-3">

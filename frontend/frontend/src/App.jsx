@@ -6,6 +6,8 @@ import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
 import HomePage from './pages/HomePage'
 import CartPage from './pages/cartPage'
+import CheckoutPage from './pages/CheckoutPage'
+import OrdersPage from './pages/ordersPage'
 import ProtectedRoute from './components/ProtectedRoute'
 
 function App(){
@@ -25,6 +27,16 @@ function App(){
          <Route path="/cart" element={
             <ProtectedRoute>
               <CartPage />
+            </ProtectedRoute>
+          } />
+           <Route path="/checkout" element={
+            <ProtectedRoute>
+              <CheckoutPage />
+            </ProtectedRoute>
+          } />
+          <Route path="/orders" element={
+            <ProtectedRoute>
+              <OrdersPage />
             </ProtectedRoute>
           } />
       </Routes>

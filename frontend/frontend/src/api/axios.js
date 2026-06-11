@@ -1,13 +1,17 @@
+
 import axios from 'axios'
+
 const instance = axios.create({
-    baseURL: 'http://localhost:5000/api',
+  baseURL: 'http://localhost:5000/api',
 })
- // attach token to every request automatically
-  instance.interceptors.request.use((config) =>{
-    const token = localStorage.getItem('token')
-    if(token){
-        config.headers.Authorization = `Bearer ${token}`
-    }
-    return config
-  })
-  export default instance
+
+instance.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token')
+  console.log('TOKEN BEING SENT:', token) // ← add this
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`
+  }
+  return config
+})
+
+export default instance
